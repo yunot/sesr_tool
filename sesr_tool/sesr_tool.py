@@ -1,5 +1,5 @@
 """Main module."""
-from infer_sr import infer_sesr
+from .infer_sr import infer_sesr
 
 
 def infer(image_dir, output_dir):

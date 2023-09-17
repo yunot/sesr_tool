@@ -2,13 +2,13 @@ import os
 import imageio
 import numpy as np
 import tensorflow as tf
-import utils
+from .utils import *
 import cv2
 
 
 def infer_sesr(image_dir: str, output_dir: str):
     image_paths = [os.path.join(image_dir, x) for x in os.listdir(image_dir)]
-    model_path = '../model/SESR_m5_f16_x2_fs256_collapsedTraining_FP32'
+    model_path = 'sesr_model/SESR_m5_f16_x2_fs256_collapsedTraining_FP32'
     model = tf.saved_model.load(model_path)
 
     for image_path in image_paths:

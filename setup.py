@@ -40,10 +40,10 @@ setup(
     include_package_data=True,
     keywords='sesr_tool',
     name='sesr_tool',
-    packages=find_packages(include=['sesr_tool', 'sesr_tool.*', 'model']),
+    packages=find_packages(include=['sesr_tool', 'sesr_tool.*','sesr_tool/sesr_model/*']),
     test_suite='tests',
     tests_require=test_requirements,
     url='https://github.com/yunot/sesr_tool',
-    version='0.1.1',
+    version='0.1.2',
     zip_safe=False,
 )
