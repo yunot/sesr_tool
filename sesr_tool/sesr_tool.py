@@ -2,12 +2,12 @@
 from infer_sr import infer_sesr
 
 
-def infer():
+def infer(image_dir, output_dir):
     try:
-        infer_sesr()  # 缺少参数age
+        infer_sesr(image_dir, output_dir)  # 缺少参数age
     except TypeError as e:
         print(f"Error: {e}")
 
 
 if __name__ == '__main__':
-    infer()
+    infer('LR', 'SR')
